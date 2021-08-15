@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Perl" content="width=device-width, initial-scale=1.0">
+    <title>Archivos Perl</title>
+</head>
+<body bgcolor="black">
+    <h1><FONT COLOR="white">Perl(Calculadora)</FONT></h1>
+    
+    <p style="text-align:left">
+        <FONT COLOR="white">Como hacer una calculadora en Perl:
+        Primero necesitaremos abrir un archivo Perl en VS CODE, una ves que ya abrimos el archivo escribiremos la ruta o sentencia para que nuestro
+        sistema operativo sepa que escribiremos un "script" de Perl y no haga errores esto es por precaucion.</FONT>
+        <table>
+            <tr>
+                <td><FONT COLOR="white">Si estas en sistema operativo Windows la ruta seria la siguiente:</FONT></td>
+                <td><FONT COLOR="green">#!C:\Perl\perl.exe</FONT></td>
+            </tr>
+            <tr>
+                <td><FONT COLOR="white">Si estas en sistema operativo Linux la ruta seria la siguiente:</FONT></td>
+                <td><FONT COLOR="green">#!/usr/bin/perl</FONT></td>
+            </tr>
+        </table>
+        <br><FONT COLOR="white">Utilizaremos el pragma "strict" de la siguiente forma:</FONT>
+        <pre>
+        <br><br><FONT COLOR="purple">use</FONT> <FONT COLOR="white">strict;</FONT>     <FONT COLOR="green">#esto sirve para que el programa nos avise de errores que cometemos.</FONT>
+        </pre>
+        <br><FONT COLOR="white">Lo siguiente es escribir un nombre yo le puse -----------CALCULADORA-------------, BUENO despues de eso le tendriamos que decir al usuario que tiene que dijitar numeros.
+        en este caso yo eh escrito: le agregare un salto de linea, cuando sea necesario. (\n)</FONT>
+
+        <pre>
+        <FONT COLOR="yellow">print</FONT> <FONT COLOR="white">"-------------CALCULADORA-------------";</FONT>
+        <FONT COLOR="yellow">print</FONT> <FONT COLOR="white">"<FONT COLOR="brown">\n</FONT>Dijite dos numeros";</FONT>
+        </pre><FONT COLOR="white">
+        Ahora tenemos que crear las variables para que sean almadenados los numeros que el usuario escribira, estas variables seran llamadas:</FONT>
+        <table>
+            <tr>
+                <td><FONT COLOR="blue">my</FONT> <FONT COLOR="navy">$numero1;</FONT></td>
+                <td><FONT COLOR="blue">my</FONT> <FONT COLOR="navy">$numero2;</FONT></td>
+            </tr>
+        </table>
+        <FONT COLOR="white">Sientete libre de llamarlas como quieras.</FONT>
+        <FONT COLOR="white"><br>Las variables tendran un valor asignado en este caso sera STDIN, que por costumbre se pone en mayusculas entre "<>", Es un manejador de ficheros que se utiliza para leer de teclado.</FONT>
+        
+        <FONT COLOR="white"><br><br>Tendremos que mostrarle al usuario las opciones que tenemos que en este caso seran las siguientes:</FONT>
+        <table>
+            <tr>
+                <td><FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"1) Sumar\n";</FONT></td>
+                <td><FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"2) Restar\n";</FONT></td>
+                <td><FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"3) Multiplicar\n";</FONT></td>
+                <td><FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"4) Dividir\n";</FONT></td>
+                <td><FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"Opcion: \n";</FONT></td>
+            </tr>
+        </table>
+        <FONT COLOR="white"><br>Con el <FONT COLOR="yellow">print</FONT> <FONT COLOR="brown">"Opcion: \n";</FONT> el usuario sabra que tiene que dijitar un numero de opciones:</FONT>
+
+        <td><FONT COLOR="white"><br><br>Tenemos que almacenar la opcion que el usuario dijititara, crearemos una variable:</FONT>
+        <td><FONT COLOR="blue"><br>my</FONT> <FONT COLOR="navy">$opcion_usuario;</FONT></td>
+        <FONT COLOR="white"><br><br>No olvidar que le asignamos el valor STDIN entre "<>" para que lee el teclado.</FONT>
+
+        <FONT COLOR="white"><br><br>Por ultimo necesitamos hacer las operaciones:</FONT>
+
+        <pre><FONT COLOR="white">
+        <FONT COLOR="purple">if</FONT>(<FONT COLOR="blue">$opcion_usuario</FONT> == 1){
+            <FONT COLOR="yellow">print</FONT> <FONT COLOR="teal">$numero1+$numero2;</FONT>
+        }<FONT COLOR="purple">elsif</FONT>(<FONT COLOR="blue">$opcion_usuario</FONT> == 2){
+            <FONT COLOR="yellow">print</FONT> <FONT COLOR="teal">$numero1-$numero2;</FONT>
+        }<FONT COLOR="purple">elsif</FONT>(<FONT COLOR="blue">$opcion_usuario</FONT> == 3){
+            <FONT COLOR="yellow">print</FONT> <FONT COLOR="teal">$numero1/$numero2;</FONT>
+        }<FONT COLOR="purple">else</FONT>{
+            <FONT COLOR="yellow">print</FONT> <FONT COLOR="teal">$numero1*$numero2;</FONT>
+        }</FONT>
+        </pre>
+
+        <br><FONT COLOR="white">Esto nos dice: Si la <FONT COLOR="teal">$opcion_usuario</FONT> es igual a el numero dijitado <FONT COLOR="green">1</FONT>, pues seria sumar.</FONT>
+        <br><FONT COLOR="white">Esto nos dice: Si la <FONT COLOR="teal">$opcion_usuario</FONT> es igual a el numero dijitado <FONT COLOR="green">2</FONT>, pues seria restar.</FONT>
+        <br><FONT COLOR="white">Esto nos dice: Si la <FONT COLOR="teal">$opcion_usuario</FONT> es igual a el numero dijitado <FONT COLOR="green">3</FONT>, pues seria multiplicar.</FONT>
+        <br><FONT COLOR="white">Esto nos dice: Si la <FONT COLOR="teal">$opcion_usuario</FONT> es igual a el numero dijitado <FONT COLOR="green">4</FONT>, pues seria dividir.</FONT>
+
+        <br><br><FONT COLOR="white">Cuando terminemos de colocar las operaciones cerramos con un:</FONT>
+        <table>
+            <tr>
+                <td><br><FONT COLOR="purple">exit;</FONT></td>
+            </tr>
+        </table>
+        <br><FONT COLOR="white">Esto es muy importante ya que indicara al script, cuando se setiene que detener.</FONT>
+        <br><br><FONT COLOR="white">Eso seria todo lo que necesitariamos para hacer la calculadora en el lenguaje de programacion Perl
+            abajo les dejo una foto de como queda.
+        </FONT>
+
+    </p>
+    <img src="imagenes/cal.jpg" width="500" height="500">
+    
+</body>
+</html>
