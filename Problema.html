@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema con Perl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                  
+    <pre>                                                                                   
+    <title>Problema con Perl</title>                                                       
+</pre>                                                                                     
 </head>
 <body bgcolor="black">
+    <ul>
+        <li><a href="index.html">Perl_CACULADORA</a></li>
+        <li><a href="Problema.html">Problema en Perl</a></li>
+    </ul>
     <h1 style="color:white">Resolveremos un problema de OmegaUp con Perl</h1>
     <h3 style="color:white">El problema es el siguiente: </h3>
-    <img src="imagenes/problem.jpg">
+    <img src="imagenes/problem.jpg" width="800" height="200">
     <p style="color: white">Primero debemos colocar la ruta de la de Perl de nuestro sistema operativo: </p>
     <table>
         <tr>
@@ -24,6 +30,41 @@
     <p style="color: white">Ahora utilizaremos el pragma "strict"</p>
     <br><br><FONT COLOR="purple">use</FONT> <FONT COLOR="white">strict;</FONT>
 
-    <p style="color: white">Una ahora tenemos que crear las variables enteras</p>
+    <br><br><br><img src="imagenes/entrada.jpg" alt="">
+    <p style="color: white">Ahora tenemos que crear las variables enteras, ya que "numeros reales" son variables enteras.</p>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$x;</FONT>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$y;</FONT>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$z;</FONT>
+
+    <br><br><FONT COLOR="purple">$x = </FONT> <FONT COLOR="white">STDIN</FONT>
+    <br><FONT COLOR="purple">$y = </FONT> <FONT COLOR="white">STDIN</FONT>
+    <br><FONT COLOR="purple">$z = </FONT> <FONT COLOR="white">STDIN</FONT>
+
+    <p style="color: white">No olvidar que cada STDIN va entre "<>".</p>
+    <p style="color: white;">Ahora creamos variables para almacenar nuestros datos, donde realizaremos las operaciones.</p>
+
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$formula1;</FONT>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$formula2;</FONT>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">$formula;</FONT>
+    <br><FONT COLOR="blue">my</FONT> <FONT COLOR="white">PI;</FONT>
+
+    <p style="color: white;">A la varibale "$PI" le asignamos el valor de 3.14, ya que ese el el valor de π.</p>
+
+    <br><FONT COLOR="red">$formula1 = </FONT> <FONT COLOR="blue">$x</FONT><FONT COLOR="white">+</FONT><FONT COLOR="blue">$x</FONT><FONT COLOR="white">*(</FONT><FONT COLOR="blue">$y</FONT><FONT COLOR="white">+</FONT><FONT COLOR="blue">$z</FONT><FONT COLOR="white">**</FONT><FONT COLOR="white">2);</FONT>
+    <br><FONT COLOR="red">$formula2 = </FONT> <FONT COLOR="white">(</FONT><FONT COLOR="blue">$x</FONT><FONT COLOR="white">+</FONT><FONT COLOR="blue">$PI</FONT><FONT COLOR="white">)*(</FONT><FONT COLOR="blue">$y</FONT><FONT COLOR="white">+</FONT><FONT COLOR="blue">$PI</FONT><FONT COLOR="white">);</FONT>
+    <br><FONT COLOR="red">$formula = </FONT> <FONT COLOR="blue">$formula1</FONT><FONT COLOR="white">/</FONT><FONT COLOR="blue">$formula2;</FONT>
+<pre>
+<p style="color: white;">Estas operaciones hacen referencia a la formula mostrada en la primera imagen pero está adaptada a Perl, hecha un vistaso y trata de entenderlas, si ya
+lo comprendistes, pues sigue leyendo. 
+Lo ultimo que sigue es imprimir la variable "formula", que es la variable donde hemo almacenado nuestras operaciones y agregarle un "exit".
+
+<FONT COLOR="yellow">print</FONT> formula;
+
+<FONT COLOR="purple">exi</FONT>;
+
+<img src="imagenes/salida.jpg" width="700" height="100">
+
+</p>
+</pre>
 </body>
 </html>
